@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>ios safari document &#x27;on&#x27; function not work on iPhone.jquery</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=55bc73c726" />
+
+    <link rel="canonical" href="http://yunguoo.com/event-delegation/" />
+    
+    <meta property="og:site_name" content="yunguo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ios safari document &#x27;on&#x27; function not work on iPhone.jquery" />
+    <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做微信端的一个项目的时候用到事件委托，大概的代码(所使用的jquery的版本为：1.11.0)是这样的： HTML: &amp;lt;ul id=&quot;list&quot;&amp;gt;     &amp;lt;li&amp;gt;A&amp;lt;/li&amp;gt;     &amp;lt;li id=&quot;doSomething&quot;&amp;gt;doSomething&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;C&amp;lt;/li&amp;gt;..." />
+    <meta property="og:url" content="http://yunguoo.com/event-delegation/" />
+    <meta property="article:published_time" content="2015-06-29T11:54:11.628Z" />
+    <meta property="article:modified_time" content="2015-12-17T13:38:15.432Z" />
+    <meta property="article:tag" content="web移动端" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ios safari document &#x27;on&#x27; function not work on iPhone.jquery" />
+    <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做微信端的一个项目的时候用到事件委托，大概的代码(所使用的jquery的版本为：1.11.0)是这样的： HTML: &amp;lt;ul id=&quot;list&quot;&amp;gt;     &amp;lt;li&amp;gt;A&amp;lt;/li&amp;gt;     &amp;lt;li id=&quot;doSomething&quot;&amp;gt;doSomething&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;C&amp;lt;/li&amp;gt;..." />
+    <meta name="twitter:url" content="http://yunguoo.com/event-delegation/" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "yunguo",
+    "author": {
+        "@type": "Person",
+        "name": "yunguo",
+        "url": "http://yunguoo.com/author/yunguo",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "ios safari document &#x27;on&#x27; function not work on iPhone.jquery",
+    "url": "http://yunguoo.com/event-delegation/",
+    "datePublished": "2015-06-29T11:54:11.628Z",
+    "dateModified": "2015-12-17T13:38:15.432Z",
+    "keywords": "web移动端",
+    "description": "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近在做微信端的一个项目的时候用到事件委托，大概的代码(所使用的jquery的版本为：1.11.0)是这样的： HTML: &amp;lt;ul id=&quot;list&quot;&amp;gt;     &amp;lt;li&amp;gt;A&amp;lt;/li&amp;gt;     &amp;lt;li id=&quot;doSomething&quot;&amp;gt;doSomething&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;C&amp;lt;/li&amp;gt;..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6" />
+    <link rel="alternate" type="application/rss+xml" title="yunguo" href="http://yunguoo.com/rss/" />
+</head>
+<body class="post-template tag-webyi-dong-duan nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
+    <ul>
+            <li class="nav-" role="presentation"><a href="http://yunguoo.com/">首页</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="http://yunguoo.com/rss/">订阅</a>
+</div>
+<span class="nav-cover"></span>
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-webyi-dong-duan">
+
+        <header class="post-header">
+            <h1 class="post-title">ios safari document &#x27;on&#x27; function not work on iPhone.jquery</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-06-29">2015年06月29日</time>  标签：<a href="/tag/webyi-dong-duan/">web移动端</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;最近在做微信端的一个项目的时候用到事件委托，大概的代码(<em>所使用的jquery的版本为：1.11.0</em>)是这样的：</p>
+
+<h6 id="html">HTML:</h6>
+
+<p><code>&lt;ul id="list"&gt;
+    &lt;li&gt;A&lt;/li&gt;
+    &lt;li id="doSomething"&gt;doSomething&lt;/li&gt;
+    &lt;li&gt;C&lt;/li&gt;
+    &lt;li&gt;D&lt;/li&gt;
+    &lt;li&gt;E&lt;/li&gt;
+    &lt;li&gt;F&lt;/li&gt;
+&lt;/ul&gt;</code>  </p>
+
+<h6 id="js">JS:</h6>
+
+<pre><code>$(document).on("click", "li", function () {
+    alert($(this).html());
+});
+</code></pre>
+
+<h6 id="">结果：</h6>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在ios的safari和微信游览器上面并没有用，然后在安卓手机上的游览器上却有效;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;经过博主的百般测试，最后发现在ios上只有对a、button、input标签有效，其余元素均没有效，博主猜测可能和jquery版本有关，低版本可能没有对移动端做很好的兼容处理，所以接下来博主改用jquery最新的版本2.0.0测试代码如下所示：</p>
+
+<h6 id="jquery">结果：博主的猜测并没有得到验证，换了最新的jquery依然没有用。</h6>
+
+<p>百思不得其解啊，难道在ios上面这个元素的事件没有冒捕获和冒泡？来用原生js写一遍代码如下所示：
+JS:这里事件是封装过的</p>
+
+<pre><code>var list = document.getElementById("list");
+EventUtil.addHandler(list, "click", function (event) {
+    event = EventUtil.getEvent(event);
+    var target = EventUtil.getTarget(event);
+    if (target.tagName == "LI") {
+        target.style.background = "blue";
+    }
+    if (target.id == "doSomething") {
+        alert(target.innerHTML);
+    }
+});
+</code></pre>
+
+<h6 id="jqueryjquery">结果：依然没有效，不科学啊，想也是，不可能jquery没处理好，自己用原生就好了，难道自己比jquery的那帮作者还牛。</h6>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;家事不懂问百度，国事不懂问google，Google了一下，果然有前辈也遇到过同样的问题.
+最后解决问题的代码居然是这么简单的一句css：
+<code>&lt;style&gt;
+    #list li
+    {
+         cursor: pointer;
+    }
+&lt;/style&gt;</code>  </p>
+
+<h6 id="safariainputbuttondocumentlistylecursor">结论： 在safari看来 a、input button、等元素是可点击才会让其冒泡到document元素上面去，而我将li的style cursor设置成后就告诉游览器我的元素是可点击的，冒泡上去吧！</h6>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="/author/yunguo/">yunguo</a></h4>
+
+                    <p>继续阅读此作者的<a href="/author/yunguo/">更多文章</a>。</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>分享此博文</h4>
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://yunguoo.com">yunguo</a> &copy; 2015</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> &amp; <a href="http://www.ghostchina.com">GhostChina</a></section>
+        </footer>
+
+    </div>
+
+    <script src="/public/jquery.js?v=55bc73c726"></script>
+
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=55bc73c726"></script>
+    <script type="text/javascript" src="/assets/js/index.js?v=55bc73c726"></script>
+
+</body>
+</html>
