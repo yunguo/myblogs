@@ -118,7 +118,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "icomoon","casper-icons", "Open Sans", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -136,7 +136,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     content: "\f600";
 }
 .icon-feed:before {
-    content: "\f601";
+    content: "\e900";
 }
 .icon-twitter:before {
     content: "\f602";
