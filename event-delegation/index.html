@@ -140,12 +140,12 @@ EventUtil.addHandler(list, "click", function (event) {
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;家事不懂问百度，国事不懂问google，Google了一下，果然有前辈也遇到过同样的问题.
 最后解决问题的代码居然是这么简单的一句css：
-<code>&lt;style&gt;
+<pre><code>&lt;style&gt;
     #list li
     {
          cursor: pointer;
     }
-&lt;/style&gt;</code>  </p>
+&lt;/style&gt;</code> </pre> </p>
 
 <h6 id="safariainputbuttondocumentlistylecursor">结论： 在safari看来 a、input button、等元素是可点击才会让其冒泡到document元素上面去，而我将li的style cursor设置成后就告诉游览器我的元素是可点击的，冒泡上去吧！</h6>
         </section>
