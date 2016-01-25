@@ -27,7 +27,7 @@ time, mark, audio, video {
 
 body {
   padding:10px 50px 0 0;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"Lucida Grande","Helvetica Neue", "Helvetica", "SimSun", "Arial Narrow";
 	font-size: 14px;
 	color: #232323;
 	background-color: #FBFAF7;
@@ -38,7 +38,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#232323;
   margin:36px 0 10px;
 }
 
@@ -47,12 +46,11 @@ p, ul, ol, table, dl {
 }
 
 h1, h2, h3 {
-	font-family: Arvo, Monaco, serif;
   line-height:1.3;
 	font-weight: normal;
 }
 
-h1,h2, h3 {
+h1{
 	display: block;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 5px;
@@ -71,7 +69,6 @@ h3 {
 }
 
 h4, h5, h6 {
-	font-family: Arvo, Monaco, serif;
 	font-weight: 700;
 }
 
@@ -115,17 +112,8 @@ blockquote {
   font-style: italic;
 }
 
-dl, dt, dd, dl p {
-	font-color: #444;
-}
-
-dl dt {
-  font-weight: bold;
-}
-
 dl dd {
   padding-left: 20px;
-  font-style: italic;
 }
 
 dl p {
@@ -265,11 +253,11 @@ header ul {
 
 header li {
 	list-style-type: none;
-  width:132px;
+  width:125px;
   height:15px;
 	margin-bottom: 12px;
 	line-height: 1em;
-	padding: 6px 6px 6px 7px;
+	padding: 6px 0 6px 7px;
 
 	background: #AF0011;
 	background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
@@ -299,13 +287,19 @@ header li:hover {
 
 a.buttons {
 	-webkit-font-smoothing: antialiased;
-	background: url(../images/arrow-down.png) no-repeat;
+	background: url(../images/iconfont-weibo.svg) no-repeat;
 	font-weight: normal;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
 	text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-	padding: 2px 2px 2px 22px;
+	padding: 2px 2px 2px 25px;
 	height: 30px;
 }
-
+a.blog{
+  background: url(../images/iconfont-blog.svg) no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
 a.github {
 	background: url(../images/octocat-small.png) no-repeat 1px;
 }
@@ -321,7 +315,6 @@ a.buttons:hover {
 section {
   width:650px;
   float:right;
-  padding-bottom:50px;
 }
 
 
