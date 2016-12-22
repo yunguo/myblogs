@@ -49,15 +49,13 @@
         <li><label for="">权证手续费:</label><span id="cardProcedure"></span>元</li>
         <li><label for="">证照费:</label><span id="certificate"></span>元</li>
         <li><label for="">物业费（6个月）:</label><span id="propertyFee"></span>元</li>
-        <li><label for="">建筑补差价:</label><span id="rateDifference">-</span>元</li>
+        <li><label for="">建筑补差价:</label><span id="rateDifference"></span>元</li>
     </ul>
 </div>
 <script src="/yunguo/public/jquery.js?v=3a0bfd769f"></script>
 <script type="text/javascript">
     $(function () {
-        var area = $("#area").val(),
-                totalPrices = $("#totalPrices").val(),
-                reg = /^([1-9]\d{0,1}|0)(\.\d{1,2})?$/,
+        var reg = /^([1-9]\d{0,1}|0)(\.\d{1,2})?$/,
                 taxRate = [1, 1.5, 2],
                 maintenanceFunds = 0,
                 stampDuty = 0,
@@ -66,6 +64,8 @@
                 propertyFee = 0,
                 cardProcedure = 0,
                 cardRegisterAdd = 0,
+                area = 0,
+                totalPrices = 0,
                 $dom = {
                     "condition": $("#condition"),
                     "taxRate": $("#taxRate"),
@@ -118,7 +118,9 @@
 
         $dom.calculate.on("click", function () {
             var condition = $dom.condition.val(),
-                    propertyType = $dom.propertyType.val();
+                    propertyType = $dom.propertyType.val(),
+                    area = $("#area").val(),
+                    totalPrices = $("#totalPrices").val();
             if (!reg.test(area)) {
                 alert('房屋面积请输入整数或者小数,小数点后面两位!');
                 $("#area").val('');
