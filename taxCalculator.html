@@ -123,7 +123,9 @@
 
         $dom.calculate.on("click", function () {
             var condition = $dom.condition.val(),
-                    propertyType = $dom.propertyType.val();
+                    propertyType = $dom.propertyType.val(),
+                    area = $("#area").val(),
+                    totalPrices = $("#totalPrices").val();
             if (!reg.test(area)) {
                 alert('房屋面积请输入整数或者小数,小数点后面两位!');
                 $("#area").val('');
