@@ -14,8 +14,6 @@
 <body>
 <p>要买麻辣小鱼干就@梦想家家罗西</p>
 
-<p><img src="images/2015/12/WechatIMG2.jpeg" alt="麻辣小黄"></p>
-
 <div>
     <ul>
         <li><label for="">购房情况:</label><select name="condition" id="condition">
@@ -51,7 +49,7 @@
     </ul>
     <p><label for="">总 价:</label><span id="allTotalPrices"></span>元</p>
 </div>
-<script src="/yunguo/public/jquery.js?v=3a0bfd769f"></script>
+<script src="/public/jquery.js?v=3a0bfd769f"></script>
 <script type="text/javascript">
     $(function () {
         var reg = /^([1-9]\d{0,10}|0)(\.\d{1,2})?$/,
@@ -82,13 +80,11 @@
                     "partOwner": $("#partOwner"),
                     "allTotalPrices": $("#allTotalPrices")
                 };
-        cardRegisterAdd = parseInt($dom.partOwner.val()) * 10;
+        cardRegisterAdd = parseInt($dom.partOwner.val()) > 1 ? parseInt($dom.partOwner.val()) * 10 : 0;
         function calculateSum(intTaxRate, propertyType) {
             var area = $("#area").val(),
                     totalPrices = $("#totalPrices").val();
             maintenanceFunds = 720 * (2.5 * 100) / (100 * 100) * (area * 100);
-            cardProcedure = totalPrices * (0.005 * 10000) * (0.50 * 100);
-            stampDuty = totalPrices * 5;
             switch (propertyType) {
                 case '1':
                     propertyFee = 2.1 * 100 * (area * 100) * 6;
@@ -97,10 +93,14 @@
                 case '2':
                     propertyFee = 50 * 100 * 100 * 6;
                     cardRegister = 550;
+                    stampDuty = totalPrices * 5;
+                    cardProcedure = totalPrices * (0.005 * 10000) * (0.50 * 100);
                     break;
                 case '3':
                     propertyFee = 5 * 100 * 100 * 6;
                     cardRegister = 550;
+                    stampDuty = totalPrices * 5;
+                    cardProcedure = totalPrices * (0.005 * 10000) * (0.50 * 100);
                     break;
                 default:
                     propertyFee = 2.1 * 100 * (area * 100) * 6;
@@ -115,7 +115,7 @@
             $dom.maintenanceFunds.html(maintenanceFunds / 100);//维修基金
             $dom.stampDuty.html(stampDuty / 10000);//印花税
             $dom.cardRegister.html(cardRegister + cardRegisterAdd);//权证登记费
-            $dom.cardRegister.html(cardProcedure / 1000000);//权证手续费
+            $dom.cardProcedure.html(cardProcedure / 1000000);//权证手续费
             $dom.certificate.html('5');//证照费
             allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100;
             $dom.allTotalPrices.html(allTotalPrices);
