@@ -109,7 +109,7 @@
             }
 
             $dom.taxRate.html(intTaxRate + '%');//税率
-            $dom.deedTax.html((parseFloat(totalPrices) * 100) / taxRate[0]);//契税
+            $dom.deedTax.html(((parseFloat(totalPrices) * 100) * (intTaxRate / 100) * 100) / 10000);//契税
             $dom.propertyFee.html(propertyFee / 10000); //物业费
 
             $dom.maintenanceFunds.html(maintenanceFunds / 100);//维修基金
@@ -117,7 +117,7 @@
             $dom.cardRegister.html(cardRegister + cardRegisterAdd);//权证登记费
             $dom.cardRegister.html(cardProcedure / 1000000);//权证手续费
             $dom.certificate.html('5');//证照费
-            allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100000000000000;
+            allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100;
             $dom.allTotalPrices.html(allTotalPrices);
         }
 
