@@ -28,8 +28,8 @@
       <file leaf-file-name="taxCalculator.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taxCalculator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34234235">
-              <caret line="155" column="55" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.4234234">
+              <caret line="110" column="70" selection-start-line="110" selection-start-column="64" selection-end-line="110" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -425,12 +425,12 @@
       <option name="number" value="Default" />
       <updated>1482414452900</updated>
       <workItem from="1482414454185" duration="1405000" />
-      <workItem from="1482416531759" duration="4739000" />
+      <workItem from="1482416531759" duration="4951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6144000" />
+    <option name="totallyTimeSpent" value="6356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taxCalculator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34234235">
-          <caret line="155" column="55" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.4234234">
+          <caret line="110" column="70" selection-start-line="110" selection-start-column="64" selection-end-line="110" selection-end-column="70" />
           <folding />
         </state>
       </provider>
