@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Thoughts, stories and ideas."/>
+
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="/yunguo/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/yunguo/assets/css/screen.css?v=3a0bfd769f"/>
+
+    <link rel="canonical" href="/"/>
+    <title>中海－右岸云特区接房手续费计算器</title>
+</head>
+<body>
+<p>要买麻辣小鱼干就@梦想家家罗西</p>
+
+<p><img src="" alt=""></p>
+
+<div>
+    <ul>
+        <li><label for="">购房情况:</label><select name="condition" id="condition">
+            <option value="1">首套房</option>
+            <option value="2">二套房</option>
+        </select></li>
+        <li><label for="">共有人:</label><select name="partOwner" id="partOwner">
+            <option value="1">1人</option>
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+        </select></li>
+        <li><label for="">物业类型:</label><select name="propertyType" id="propertyType">
+            <option value="1">住宅</option>
+            <option value="2">车位</option>
+            <option value="3">商业</option>
+        </select></li>
+        <li><label for="">房屋面积:</label><input type="text" id="area">㎡</li>
+        <li><label for="">房屋总价:</label><input type="text" id="totalPrices">元</li>
+    </ul>
+    <div>
+        <button type="button" id="calculate">计 算</button>
+    </div>
+    <ul>
+        <li><label for="">适用税率:</label><span id="taxRate"></span></li>
+        <li><label for="">契 税:</label><span id="deedTax"></span></li>
+        <li><label for="">维修基金:</label><span id="maintenanceFunds"></span>元</li>
+        <li><label for="">印花税:</label><span id="stampDuty"></span>元</li>
+        <li><label for="">权证登记费:</label><span id="cardRegister"></span>元</li>
+        <li><label for="">权证手续费:</label><span id="cardProcedure"></span>元</li>
+        <li><label for="">证照费:</label><span id="certificate"></span>元</li>
+        <li><label for="">物业费（6个月）:</label><span id="propertyFee"></span>元</li>
+        <li><label for="">建筑补差价:</label><span id="rateDifference">-</span>元</li>
+    </ul>
+</div>
+<script src="/yunguo/public/jquery.js?v=3a0bfd769f"></script>
+<script type="text/javascript">
+    $(function () {
+        var area = $("#area").val(),
+                totalPrices = $("#totalPrices").val(),
+                reg = /^([1-9]\d{0,1}|0)(\.\d{1,2})?$/,
+                taxRate = [1, 1.5, 2],
+                maintenanceFunds = 0,
+                stampDuty = 0,
+                cardRegister = 0,
+                certificate = 0,
+                propertyFee = 0,
+                cardProcedure = 0,
+                cardRegisterAdd = 0,
+                $dom = {
+                    "condition": $("#condition"),
+                    "taxRate": $("#taxRate"),
+                    "maintenanceFunds": $("#maintenanceFunds"),
+                    "stampDuty": $("#stampDuty"),
+                    "cardRegister": $("#cardRegister"),
+                    "certificate": $("#certificate"),
+                    "propertyFee": $("#propertyFee"),
+                    "rateDifference": $("#rateDifference"),
+                    "calculate": $("#calculate"),
+                    "deedTax": $("#deedTax"),
+                    "propertyType": $("#propertyType"),
+                    "cardProcedure": $("#cardProcedure"),
+                    "partOwner": $("#partOwner")
+                };
+        cardRegisterAdd = parseInt($dom.partOwner.val()) * 10;
+        function calculateSum(intTaxRate, propertyType) {
+            maintenanceFunds = 720 * (2.5 * 100) / (100 * 100) * (area * 100);
+            cardProcedure = totalPrices * (0.005 * 10000) * (0.50 * 100);
+            stampDuty = totalPrices * 5;
+            switch (propertyType) {
+                case '1':
+                    propertyFee = 2.1 * 100 * (area * 100) * 6;
+                    cardRegister = 80;
+                    break;
+                case '2':
+                    propertyFee = 50 * 100 * 100 * 6;
+                    cardRegister = 550;
+                    break;
+                case '3':
+                    propertyFee = 5 * 100 * 100 * 6;
+                    cardRegister = 550;
+                    break;
+                default:
+                    propertyFee = 2.1 * 100 * (area * 100) * 6;
+                    cardRegister = 80;
+                    break;
+            }
+
+            $dom.taxRate.html(intTaxRate + '%');//税率
+            $dom.deedTax.html((parseFloat(totalPrices) * 100) / taxRate[0]);//契税
+            $dom.propertyFee.html(propertyFee / 10000); //物业费
+
+            $dom.maintenanceFunds.html(maintenanceFunds / 100);//维修基金
+            $dom.stampDuty.html(stampDuty / 10000);//印花税
+            $dom.cardRegister.html(cardRegister + cardRegisterAdd);//权证登记费
+            $dom.cardRegister.html(cardProcedure / 1000000);//权证手续费
+            $dom.certificate.html('5');//证照费
+        }
+
+        $dom.calculate.on("click", function () {
+            var condition = $dom.condition.val(),
+                    propertyType = $dom.propertyType.val();
+            if (!reg.test(area)) {
+                alert('房屋面积请输入整数或者小数,小数点后面两位!');
+                $("#area").val('');
+                return;
+            }
+            if (!reg.test(totalPrices)) {
+                alert('房屋总价请输入整数或者小数,小数点后面两位!');
+                $("#totalPrices").val('');
+                return;
+            }
+            switch (condition) {
+                case '1':
+                    if (parseFloat(area) <= 90) {
+                        calculateSum(taxRate[0], propertyType);
+
+                    } else {
+                        calculateSum(taxRate[1], propertyType);
+                    }
+                    break;
+                case '2':
+                    if (parseFloat(area) >= 90) {
+                        calculateSum(taxRate[0], propertyType);
+                    } else {
+                        calculateSum(taxRate[2], propertyType);
+                    }
+                    break;
+                default:
+                    calculateSum(taxRate[0], propertyType);
+                    break;
+            }
+
+        });
+    });
+</script>
+</body>
+</html>
