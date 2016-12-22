@@ -84,6 +84,8 @@
                 };
         cardRegisterAdd = parseInt($dom.partOwner.val()) * 10;
         function calculateSum(intTaxRate, propertyType) {
+            var area = $("#area").val(),
+                    totalPrices = $("#totalPrices").val();
             maintenanceFunds = 720 * (2.5 * 100) / (100 * 100) * (area * 100);
             cardProcedure = totalPrices * (0.005 * 10000) * (0.50 * 100);
             stampDuty = totalPrices * 5;
@@ -115,15 +117,13 @@
             $dom.cardRegister.html(cardRegister + cardRegisterAdd);//权证登记费
             $dom.cardRegister.html(cardProcedure / 1000000);//权证手续费
             $dom.certificate.html('5');//证照费
-            allTotalPrices=(parseFloat($dom.deedTax.html())*100+parseFloat($dom.propertyFee.html())*100+parseFloat($dom.maintenanceFunds.html())*100+parseFloat($dom.stampDuty.html())*100+parseFloat($dom.cardRegister.html())*100+parseFloat($dom.cardRegister.html())*100+parseFloat($dom.certificate.html())*100)/100000000000000;
-            $dom.allTotalPrices.html();
+            allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100000000000000;
+            $dom.allTotalPrices.html(allTotalPrices);
         }
 
         $dom.calculate.on("click", function () {
             var condition = $dom.condition.val(),
-                    propertyType = $dom.propertyType.val(),
-                    area = $("#area").val(),
-                    totalPrices = $("#totalPrices").val();
+                    propertyType = $dom.propertyType.val();
             if (!reg.test(area)) {
                 alert('房屋面积请输入整数或者小数,小数点后面两位!');
                 $("#area").val('');
