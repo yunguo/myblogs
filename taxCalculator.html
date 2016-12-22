@@ -69,9 +69,11 @@
                         <option value="2">二套房</option>
                     </select></li>
                     <li><label for="">共有人:</label><select name="partOwner" id="partOwner">
+                        <option value="0">0人</option>
                         <option value="1">1人</option>
                         <option value="2">2人</option>
                         <option value="3">3人</option>
+                        <option value="4">4人</option>
                     </select></li>
                     <li><label for="">物业类型:</label><select name="propertyType" id="propertyType">
                         <option value="1">住宅</option>
@@ -151,7 +153,7 @@
             var area = $("#area").val(),
                     totalPrices = $("#totalPrices").val();
             maintenanceFunds = 720 * (2.5 * 100) / (100 * 100) * (area * 100);
-            cost = parseInt($dom.partOwner.val()) > 1 ? parseInt($dom.partOwner.val()) * 10 : 0;
+            cost = parseInt($dom.partOwner.val()) * 10;
             switch (propertyType) {
                 case '1':
                     propertyFee = 2.1 * 100 * (area * 100) * 6;
