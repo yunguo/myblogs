@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3474c8e-b025-4edd-b663-801f72f233ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-delegation/index.html" afterPath="$PROJECT_DIR$/event-delegation/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taxCalculator.html" afterPath="$PROJECT_DIR$/taxCalculator.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,8 +28,8 @@
       <file leaf-file-name="taxCalculator.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taxCalculator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6857143">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6571429">
+              <caret line="154" column="35" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -417,6 +415,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b3474c8e-b025-4edd-b663-801f72f233ba" name="Default" comment="" />
@@ -424,12 +425,12 @@
       <option name="number" value="Default" />
       <updated>1482414452900</updated>
       <workItem from="1482414454185" duration="1405000" />
-      <workItem from="1482416531759" duration="3894000" />
+      <workItem from="1482416531759" duration="4101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5299000" />
+    <option name="totallyTimeSpent" value="5506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taxCalculator.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6857143">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6571429">
+          <caret line="154" column="35" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
           <folding />
         </state>
       </provider>
