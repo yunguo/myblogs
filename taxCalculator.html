@@ -1,55 +1,122 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Thoughts, stories and ideas."/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <link rel="shortcut icon" href="/yunguo/favicon.ico">
-    <link rel="canonical" href="/"/>
     <title>中海－右岸云特区接房手续费计算器</title>
-</head>
-<body>
-<p>要买麻辣小鱼干就@梦想家家罗西</p>
+    <meta name="description" content="" />
 
-<div>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/yunguo/assets/css/screen.css?v=55bc73c726" />
+
+    <link rel="canonical" href="http://yunguoo.com/event-delegation/" />
+
+    <meta property="og:site_name" content="yunguo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="中海－右岸云特区接房手续费计算器" />
+    <meta property="og:description" content="中海－右岸云特区接房手续费计算器" />
+    <meta property="og:url" content="http://yunguoo.com/event-delegation/" />
+    <meta property="article:published_time" content="2015-06-29T11:54:11.628Z" />
+    <meta property="article:modified_time" content="2015-12-17T13:38:15.432Z" />
+    <meta property="article:tag" content="web移动端" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="中海－右岸云特区接房手续费计算器" />
+    <meta name="twitter:description" content="中海－右岸云特区接房手续费计算器" />
+    <meta name="twitter:url" content="http://yunguoo.com/event-delegation/" />
+
+
+    <meta name="generator" content="Ghost 0.6" />
+    <link rel="alternate" type="application/rss+xml" title="yunguo" href="http://yunguoo.com/rss/" />
+</head>
+<body class="post-template tag-webyi-dong-duan nav-closed">
+
+<div class="nav">
+    <h3 class="nav-title">菜单</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">关闭</span>
+    </a>
     <ul>
-        <li><label for="">购房情况:</label><select name="condition" id="condition">
-            <option value="1">首套房</option>
-            <option value="2">二套房</option>
-        </select></li>
-        <li><label for="">共有人:</label><select name="partOwner" id="partOwner">
-            <option value="1">1人</option>
-            <option value="2">2人</option>
-            <option value="3">3人</option>
-        </select></li>
-        <li><label for="">物业类型:</label><select name="propertyType" id="propertyType">
-            <option value="1">住宅</option>
-            <option value="2">车位</option>
-            <option value="3">商业</option>
-        </select></li>
-        <li><label for="">房屋面积:</label><input type="text" id="area">㎡</li>
-        <li><label for="">房屋总价:</label><input type="text" id="totalPrices">元</li>
+        <li class="nav-" role="presentation"><a href="http://yunguoo.com/">首页</a></li>
     </ul>
-    <div>
-        <button type="button" id="calculate">计 算</button>
-    </div>
-    <ul>
-        <li><label for="">适用税率:</label><span id="taxRate"></span></li>
-        <li><label for="">契 税:</label><span id="deedTax"></span>元</li>
-        <li><label for="">维修基金:</label><span id="maintenanceFunds"></span>元</li>
-        <li><label for="">印花税:</label><span id="stampDuty"></span>元</li>
-        <li><label for="">权证登记费:</label><span id="cardRegister"></span>元</li>
-        <li><label for="">权证手续费:</label><span id="cardProcedure"></span>元</li>
-        <li><label for="">证照费:</label><span id="certificate"></span>元</li>
-        <li><label for="">物业费（6个月）:</label><span id="propertyFee"></span>元</li>
-        <li><label for="">建筑补差价:</label><span id="rateDifference"></span>元</li>
-    </ul>
-    <p><label for="">总 价:</label><span id="allTotalPrices"></span>元</p>
+    <a class="subscribe-button icon-feed" href="/yunguo/resumes/">订阅</a>
 </div>
-<script src="/yunguo/public/jquery.js?v=3a0bfd769f"></script>
+<span class="nav-cover"></span>
+
+<div class="site-wrapper">
+
+
+
+
+    <header class="main-header post-head no-cover">
+        <nav class="main-nav  clearfix">
+
+            <a class="menu-button icon-menu" href="#"><span class="word">菜单</span></a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post tag-webyi-dong-duan">
+            <p>要买麻辣小鱼干就@梦想家罗西</p>
+
+            <div>
+                <ul>
+                    <li><label for="">购房情况:</label><select name="condition" id="condition">
+                        <option value="1">首套房</option>
+                        <option value="2">二套房</option>
+                    </select></li>
+                    <li><label for="">共有人:</label><select name="partOwner" id="partOwner">
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                    </select></li>
+                    <li><label for="">物业类型:</label><select name="propertyType" id="propertyType">
+                        <option value="1">住宅</option>
+                        <option value="2">车位</option>
+                        <option value="3">商业</option>
+                    </select></li>
+                    <li><label for="">房屋面积:</label><input type="text" id="area">㎡</li>
+                    <li><label for="">房屋总价:</label><input type="text" id="totalPrices">元</li>
+                </ul>
+                <div>
+                    <button type="button" id="calculate">计 算</button>
+                </div>
+                <ul>
+                    <li><label for="">适用税率:</label><span id="taxRate"></span></li>
+                    <li><label for="">契 税:</label><span id="deedTax"></span>元</li>
+                    <li><label for="">维修基金:</label><span id="maintenanceFunds"></span>元</li>
+                    <li><label for="">印花税:</label><span id="stampDuty"></span>元</li>
+                    <li><label for="">权证登记费:</label><span id="cardRegister"></span>元</li>
+                    <li><label for="">权证手续费:</label><span id="cardProcedure"></span>元</li>
+                    <li><label for="">共有人工本费:</label><span id="cost"></span>元</li>
+                    <li><label for="">证照费:</label><span id="certificate"></span>元</li>
+                    <li><label for="">物业费（6个月）:</label><span id="propertyFee"></span>元</li>
+                    <li><label for="">建筑补差价:</label><span id="rateDifference"></span>元</li>
+                </ul>
+                <p><label for="">总 价:</label><span id="allTotalPrices"></span>元</p>
+            </div>
+        </article>
+    </main>
+
+    <aside class="read-next">
+    </aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="http://yunguoo.com">yunguo</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> &amp; <a href="http://www.ghostchina.com">GhostChina</a></section>
+    </footer>
+
+</div>
+
+<script src="/yunguo/public/jquery.js?v=55bc73c726"></script>
 <script type="text/javascript">
     $(function () {
         var reg = /^([1-9]\d{0,10}|0)(\.\d{1,2})?$/,
@@ -62,6 +129,7 @@
                 cardProcedure = 0,
                 cardRegisterAdd = 0,
                 area = 0,
+                cost = 0,
                 totalPrices = 0,
                 allTotalPrices = 0,
                 $dom = {
@@ -78,13 +146,15 @@
                     "propertyType": $("#propertyType"),
                     "cardProcedure": $("#cardProcedure"),
                     "partOwner": $("#partOwner"),
-                    "allTotalPrices": $("#allTotalPrices")
+                    "allTotalPrices": $("#allTotalPrices"),
+                    "cost": $("#cost")
                 };
-        cardRegisterAdd = parseInt($dom.partOwner.val()) > 1 ? parseInt($dom.partOwner.val()) * 10 : 0;
+
         function calculateSum(intTaxRate, propertyType) {
             var area = $("#area").val(),
                     totalPrices = $("#totalPrices").val();
             maintenanceFunds = 720 * (2.5 * 100) / (100 * 100) * (area * 100);
+            cost = parseInt($dom.partOwner.val()) * 10;
             switch (propertyType) {
                 case '1':
                     propertyFee = 2.1 * 100 * (area * 100) * 6;
@@ -114,10 +184,11 @@
 
             $dom.maintenanceFunds.html(maintenanceFunds / 100);//维修基金
             $dom.stampDuty.html(stampDuty / 10000);//印花税
-            $dom.cardRegister.html(cardRegister + cardRegisterAdd);//权证登记费
+            $dom.cardRegister.html(cardRegister);//权证登记费
             $dom.cardProcedure.html(cardProcedure / 1000000);//权证手续费
             $dom.certificate.html('5');//证照费
-            allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100;
+            $dom.cost.html(cost);// 工本费
+            allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardProcedure.html()) * 100 + parseFloat($dom.cost.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100;
             $dom.allTotalPrices.html(allTotalPrices);
         }
 
