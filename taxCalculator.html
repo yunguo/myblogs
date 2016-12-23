@@ -60,7 +60,7 @@
 
     <main class="content" role="main">
         <article class="post tag-webyi-dong-duan">
-            <p>要买麻辣小鱼干就@梦想家罗西</p>
+            <p>要买麻辣罗非鱼和香辣银鱼仔就@梦想家罗西和兔子.By the way,我相信您吃过后一定会再来的.</p>
 
             <div>
                 <ul>
@@ -126,7 +126,6 @@
                 certificate = 0,
                 propertyFee = 0,
                 cardProcedure = 0,
-                cardRegisterAdd = 0,
                 area = 0,
                 cost = 0,
                 totalPrices = 0,
@@ -216,7 +215,7 @@
                     }
                     break;
                 case '2':
-                    if (parseFloat(area) >= 90) {
+                    if (parseFloat(area) <= 90) {
                         calculateSum(taxRate[0], propertyType);
                     } else {
                         calculateSum(taxRate[2], propertyType);
