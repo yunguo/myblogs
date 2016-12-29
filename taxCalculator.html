@@ -10,7 +10,7 @@
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/yunguo/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/yunguo/assets/css/screen.css?v=55bc73c726"/>
 
@@ -98,7 +98,7 @@
                     <li><label for="">物业费（6个月）:</label><span id="propertyFee"></span>元</li>
                     <li><label for="">建筑补差价:</label><span id="rateDifference"></span>元</li>
                 </ul>
-                <p><label for="">总 价:</label><span id="allTotalPrices"></span>元</p>
+                <p><label for="">合 计:</label><span id="allTotalPrices"></span>元</p>
             </div>
         </article>
     </main>
@@ -177,13 +177,13 @@
             }
 
             $dom.taxRate.html(intTaxRate + '%');//税率
-            $dom.deedTax.html(((parseFloat(totalPrices) * 100) * (intTaxRate / 100) * 100) / 10000);//契税
-            $dom.propertyFee.html(propertyFee / 10000); //物业费
+            $dom.deedTax.html(parseFloat(((parseFloat(totalPrices) * 100) * (intTaxRate / 100) * 100) / 10000).toFixed(2));//契税
+            $dom.propertyFee.html(parseFloat(propertyFee / 10000).toFixed(2)); //物业费
 
-            $dom.maintenanceFunds.html(maintenanceFunds / 100);//维修基金
-            $dom.stampDuty.html(stampDuty / 10000);//印花税
-            $dom.cardRegister.html(cardRegister);//权证登记费
-            $dom.cardProcedure.html(cardProcedure / 1000000);//权证手续费
+            $dom.maintenanceFunds.html(parseFloat(maintenanceFunds / 100).toFixed(2));//维修基金
+            $dom.stampDuty.html(parseFloat(stampDuty / 10000).toFixed(2));//印花税
+            $dom.cardRegister.html(parseFloat(cardRegister).toFixed(2));//权证登记费
+            $dom.cardProcedure.html(parseFloat(cardProcedure / 1000000).toFixed(2));//权证手续费
             $dom.certificate.html('5');//证照费
             $dom.cost.html(cost);// 工本费
             allTotalPrices = (parseFloat($dom.deedTax.html()) * 100 + parseFloat($dom.propertyFee.html()) * 100 + parseFloat($dom.maintenanceFunds.html()) * 100 + parseFloat($dom.stampDuty.html()) * 100 + parseFloat($dom.cardProcedure.html()) * 100 + parseFloat($dom.cost.html()) * 100 + parseFloat($dom.cardRegister.html()) * 100 + parseFloat($dom.certificate.html()) * 100) / 100;
