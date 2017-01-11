@@ -1,8 +1,49 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container{
+padding: 0 20px;
+flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.log-item {
-  margin: 10rpx;
+.section_gap{
+  width: 100%;
+  line-height: 20px;
+  padding: 5px 0;
+}
+
+.text,.resultValue,.unit{
+  display: inline-block;
+  line-height: normal;
+}
+.text{
+  text-align: right;
+  padding-right: 5px;
+  width: 48%;
+}
+.text,.unit{
+  font-size: .8rem;
+  color: #C0C1C5;
+}
+.unit{
+padding-left:10px;
+width:20%;
+font-size: .6rem;
+}
+.resultValue{
+font-size: 1rem;
+}
+.allTotalPrices{
+  padding: 20px 0;
+  height: 50px;
+}
+.allTotalPrices_text{
+  font-weight:700;
+  font-size: 2.5rem;
+  height: 100%;
+  line-height: normal;
+}
+.allTotalPrices_unit{
+  padding-left: 10px;
+  height: 100%;
+  line-height: normal;
+  display: initial;
 }

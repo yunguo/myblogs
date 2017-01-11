@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container">
+<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
     <form bindsubmit="formSubmit" class="formView">
         <view class="section section_gap">
             <text class="text">购房情况：</text>
@@ -27,16 +30,16 @@
         </view>
         <view class="section section_gap">
             <text class="text">房屋面积：</text>
-            <input class="inputView" name="area" type="digit" placeholder-class="placeholderClass" placeholder="请输入房屋面积"/>
-            <text class="unit">㎡</text>
+            <input class="inputView" name="area" type="digit" placeholder-class="placeholderClass" placeholder="请输入物业面积"/>
+            <text class="unit_pin">㎡</text>
         </view>
         <view class="section section_gap">
             <text class="text">房屋总价：</text>
-            <input class="inputView" name="totalPrices" type="digit" placeholder-class="placeholderClass" placeholder="请输入房屋总价"/>
-            <text class="unit">元</text>
+            <input class="inputView" name="totalPrices" type="digit" placeholder-class="placeholderClass" placeholder="请输入物业总价"/>
+            <text class="unit">CNY</text>
         </view>
         <view class="btn-area btn_gap">
-            <button formType="submit"  hover-class="button-hover" class="submitBtn">开始计算</button>
+            <button formType="submit" hover-class="button-hover" class="submitBtn">开始计算</button>
         </view>
     </form>
 </view>

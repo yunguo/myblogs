@@ -70,68 +70,72 @@ Page({
     ],
     conditionIndex: 0,
     partOwnerIndex: 0,
-    propertyTypeIndex:0
+    propertyTypeIndex: 0,
   },
-  conditionChange: function(e) {
+  reg:/^[0-9]+(.[0-9]{2})?$/,
+  commoneShowModal:function(msg){
+wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: msg,
+        success: function (res) {
+          if (res.confirm) {
+            wx.hideToast();
+          }
+        }
+      });
+  },
+  conditionChange: function (e) {
     this.setData({
       conditionIndex: e.detail.value
-    })
+    });
   },
-  partOwnerChange: function(e) {
+  partOwnerChange: function (e) {
     this.setData({
       partOwnerIndex: e.detail.value
     })
   },
-  propertyTypeChange: function(e) {
+  propertyTypeChange: function (e) {
     this.setData({
       propertyTypeIndex: e.detail.value
     })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  formSubmit: function(e) {
-     let formData=e.detail.value;
-     if(!formData.area){
-wx.showModal({
-  title: '提示',
-  showCancel:false,
-  content: '请输入房屋面积！',
-  success: function(res) {
-    if (res.confirm) {
-      wx.hideToast();
+  formSubmit: function (e) {
+    let formData = e.detail.value;
+    if (!formData.area) {
+      this.commoneShowModal("请输入物业面积!")
+      return false;
     }
-  }
-});
-return false;
-     }
-     if(!formData.totalPrices){
-wx.showModal({
-  title: '提示',
-  showCancel:false,
-  content: '请输入房屋总价！',
-  success: function(res) {
-    if (res.confirm) {
-      wx.hideToast();
+    if (!formData.totalPrices) {
+      this.commoneShowModal("请输入物业总价!")
+      return false;
     }
-  }
-});
-return false;
-     }
-wx.navigateTo({
-  url: '../result/result'
-})
+    if(!this['reg'].test(formData.area)||!this['reg'].test(formData.totalPrices)){
+this.commoneShowModal("请输入整数或者两位小数点的小数！");
+      return false;
+    }
+    try {
+      wx.setStorageSync('formData', formData)
+    } catch (e) {
+      wx.setStorage('formData', formData)
+    }
+    wx.navigateTo({
+      url: '../result/result'
+    })
   },
   onLoad: function () {
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
+    app.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
-        userInfo:userInfo
+        userInfo: userInfo
       })
     })
   }
