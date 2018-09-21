@@ -466,14 +466,19 @@ margin on the iframe, cause it breaks stuff. */
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    max-width: 500px;
     margin: 0 auto;
     height: 400px;
-    background: #36D1DC;
-    transition: background 1s ease-in 0s;
+    background:  radial-gradient(#36D1DC, #5B86E5);
     border-radius: 50%;
+   /* transition: background 1s ease-in 0s;*/
+    animation-name: breathe;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
 }
 .inner:hover{
+    animation-iteration-count: 0;
     background:#5B86E5;
 }
 /* Centres vertically yo. (IE8+) */
@@ -1819,7 +1824,10 @@ body:not(.post-template) .post-title {
         padding: 60px 9% 5%;
     }
 
-    .inner,
+    .inner{
+        width: 20rem;
+        height: 20rem;
+    }
     .pagination {
         width: auto;
         margin: 2rem auto;
@@ -2029,7 +2037,11 @@ body:not(.post-template) .post-title {
         transform: translateY(0);
     }
 }
-
+@keyframes breathe {
+    from { opacity: 0.1; }                          /* 动画开始时的不透明度 */
+    50%  { opacity:   1; }                          /* 动画50% 时的不透明度 */
+    to   { opacity: 0.1; }
+}
 /* Used to bounce .scroll-down on home page */
 @-webkit-keyframes bounce {
     0%, 10%, 25%, 40%, 50% {
