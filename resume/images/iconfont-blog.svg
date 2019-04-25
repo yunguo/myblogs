@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="width:308px;height:308px;" version="1.1" id="图形" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px" height="1024px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+  <path class="svgpath" data-index="path_0" fill="#ffffff" d="M703.3337 321.612858l0 574.827931L190.738136 896.440789l0-768.502955 318.167387 0L508.905522 63.392796 185.924503 63.392796c-32.213679 0-58.328453 26.114774-58.328453 58.328453l0 780.556479c0 32.213679 26.114774 58.328453 58.328453 58.328453L708.797132 960.606181c32.213679 0 58.328453-26.114774 58.328453-58.328453l0-580.664869L703.3337 321.612858 703.3337 321.612858z" />
+<path class="svgpath" data-index="path_1" fill="#ffffff" d="M508.905522 263.284405c0 32.213679 26.114774 58.328453 58.328453 58.328453L767.125585 321.612858 508.905522 63.392796 508.905522 263.284405z" />
+<path class="svgpath" data-index="path_2" fill="#ffffff" d="M831.327816 127.426181l65.076134 0 0 65.076134-65.076134 0 0-65.076134Z" />
+<path class="svgpath" data-index="path_3" fill="#ffffff" d="M831.327816 256.536724 896.40395 256.536724 896.40395 918.058133 863.865883 960.607204 831.327816 918.058133Z" />
+
+</svg>

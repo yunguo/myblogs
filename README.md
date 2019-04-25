@@ -1,2 +1,2 @@
-# myBlogs
-我的私人博客
+# yunguo
+https://yunguo.github.io/myblogs/

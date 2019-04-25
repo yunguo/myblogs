@@ -1,0 +1,11 @@
+.markdown{
+	width: 900px;
+	height: 600px;
+}
+.file-setting{
+    color: yellow;
+}
+#incallback,#outcallback{
+    margin-top:10px;
+    background-color: rgba(0,0,0,.5);
+}
