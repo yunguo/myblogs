@@ -6,13 +6,22 @@
 	<script src="index.js"></script>
 </head>
 <body>
-	<div><label for="">数据:</label><textarea name="inputData" id="inputData" cols="30" rows="10" placeholder="输入要排序的数组"></textarea></div>
+<div style="display: flex;justify-content:space-around;">
+  <div>
+	<div><label for="inputData">数据:</label><textarea name="inputData" id="inputData" cols="30" rows="10" placeholder="输入要排序的数组"></textarea></div>
 	<div>
 		<label for="">排序算法:</label>
 		<select name="algorithm" id="algorithm" style="width: 150px;"></select>
 	</div>
 	<button id="sorting">排序</button>
 	<div><label for="">排序结果:</label><textarea name="sortResult" id="sortResult" cols="30" rows="10"></textarea></div>
-	<div><label for="">排序时间:</label><span id="time"></span></div>
+  </div>
+  <div>
+    <div>斐波那契数列</div>
+    <div><label for="target">目标值：</label><input type="text" name="target" id="target"></div>
+    <button id="generate">生成</button>
+    <div><textarea cols="30" rows="10" id="fibonacciRs"></textarea></div>
+  </div>
+</div>
 </body>
 </html>
