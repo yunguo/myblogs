@@ -72,14 +72,21 @@ const sort = () => {
     sortResult.value = JSON.stringify(result);
   };
 };
-const fibonacci = (n) => n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
-const util = {
-  objType(arg) {
-    return Object.prototype.toString.call(arg).replace(/^\[object ([a-zA-Z0-9]+)\]$/, '$1');
-  }
-};
-window.onload = () => {
-  sort();
+const fibonacciWarp = () => {
+  let map = {};
+  const fibonacci = (n) => {
+    if (n <= 1) {
+      return n;
+    } else {
+      if (map[n]) {
+        return map[n];
+      } else {
+        const r = fibonacci(n - 2) + fibonacci(n - 1);
+        map[n] = r;
+        return r;
+      }
+    }
+  };
   const {generate, fibonacciRs} = Query();
   generate.onclick = function(e) {
     let inputDataValue = document.querySelector('#target').value;
@@ -87,5 +94,14 @@ window.onload = () => {
       fibonacciRs.value = fibonacci(inputDataValue);
     }
   };
+};
 
+const util = {
+  objType(arg) {
+    return Object.prototype.toString.call(arg).replace(/^\[object ([a-zA-Z0-9]+)\]$/, '$1');
+  }
+};
+window.onload = () => {
+  sort();
+  fibonacciWarp();
 };
