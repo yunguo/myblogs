@@ -52,15 +52,4 @@
     color: #fff;
     z-index: 0;
 }
-.inner:after {
-    display: flex;
-    content: '';
-    width: 18rem;
-    margin: -10px auto;
-    height: 18rem;
-    border-radius: 50%;
-    flex-direction: column;
-    justify-content: center;
-    z-index: -1;
-    border: 1px solid red;
-}
+
