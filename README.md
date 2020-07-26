@@ -1,2 +1,2 @@
 # yunguo
-https://yunguo.github.io/myblogs/
+https://yunguo.github.io/myBlogs/
