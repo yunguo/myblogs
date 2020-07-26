@@ -1,55 +1,70 @@
 /* Creates a responsive wrapper that makes our content scale nicely */
+@keyframes red-ball {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
 .inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 18rem;
-    margin: 0 auto;
-    height: 18rem;
-    background: radial-gradient(#36D1DC, #5B86E5);
-    border-radius: 50%;
-    /*transition: background 3s ease 0s;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18rem;
+  margin: 0 auto;
+  height: 18rem;
+  background: radial-gradient(#36D1DC, #5B86E5);
+  border-radius: 50%;
+  /*transition: background 3s ease 0s;*/
 }
 
 .inner:hover {
-    background: #5B86E5;
+  background: #5B86E5;
 }
 
 /* Centres vertically yo. (IE8+) */
 .vertical {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Big cover image on the home page */
 .main-header {
-    position: relative;
-    display: table;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 0;
-    text-align: center;
-    background-size: cover;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0;
+  padding-top: 20px;
+  text-align: center;
+  background-size: cover;
+  overflow: hidden;
+}
+#my-canvas{
+  width: 100%;
+  height: 100%;
+}
+.block {
+  position: relative;
+  border: solid 1px #f3f3f3;
+  width: 20%;
+  height: 40%;
 }
 
-.page-description {
-    margin: 0;
-    font-size: 2rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    letter-spacing: 0.01rem;
-    color: rgba(255, 255, 255, 0.8);
-    z-index: 0;
-}
-
-.page-title {
-    margin: 10px 0 10px 0;
-    font-size: 3rem;
-    letter-spacing: -1px;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
-    color: #fff;
-    z-index: 0;
+.ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  offset-path: path('M10,90 C98,126 197,120 295,90');
+  offset-distance: 0%;
+  animation: red-ball 2s linear alternate infinite;
 }
 
