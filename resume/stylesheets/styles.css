@@ -345,17 +345,6 @@ section {
     float: right;
 }
 
-
-/* Footer */
-
-footer {
-    width: 170px;
-    float: left;
-    position: fixed;
-    bottom: 10px;
-    padding-left: 50px;
-}
-
 @media print, screen and (max-width: 960px) {
 
     div.wrapper {
@@ -376,7 +365,7 @@ footer {
     }
 
     header {
-        padding-right: 320px;
+        padding-right: 300px;
     }
 
     section {
@@ -418,10 +407,6 @@ footer {
 
     header ul li.download {
         display: none;
-    }
-
-    footer {
-        margin: 0 0 0 20px;
     }
 
     footer a {
