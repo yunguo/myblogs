@@ -262,12 +262,15 @@ a.name {
     font-size: 16px;
     padding-left: 5px;
 }
-.main .main-content>p:first-child{
+
+.main .main-content > p:first-child {
     margin-top: 20px;
 }
-.main .main-content>p{
+
+.main .main-content > p {
     margin: 5px 0;
 }
+
 header ul {
     list-style: none;
     padding: 0;
@@ -337,6 +340,11 @@ a.buttons:hover {
 
 
 /* Section - for main page content */
+@media print {
+    section {
+        margin-top: 10px;
+    }
+}
 
 section {
     width: 650px;
