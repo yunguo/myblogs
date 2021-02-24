@@ -380,8 +380,7 @@ footer {
     }
 
     section {
-        padding: 20px 84px 20px 50px;
-        margin: 0 0 20px;
+        margin: 0 0 10px;
     }
 
     header a small {
@@ -407,11 +406,7 @@ footer {
     }
 
     section {
-        margin: 0 0 30px;
-    }
-
-    footer {
-        margin: 0 0 0 30px;
+        margin: 0 0 10px;
     }
 
     header ul, header p.view {
