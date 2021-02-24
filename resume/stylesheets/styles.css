@@ -358,12 +358,6 @@ section {
         width: auto;
     }
 
-    footer {
-        border-top: 1px solid #ccc;
-        margin: 0 84px 0 50px;
-        padding: 0;
-    }
-
     header {
         padding-right: 320px;
     }
@@ -374,13 +368,6 @@ section {
 
     header a small {
         display: inline;
-    }
-
-    header ul {
-        position: absolute;
-        right: 130px;
-        top: 84px;
-        margin-top: 0;
     }
 }
 
@@ -407,7 +394,6 @@ section {
     header ul li.download {
         display: none;
     }
-
     footer a {
         display: block;
     }
